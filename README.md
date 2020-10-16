@@ -2,12 +2,17 @@
 
 **I will not be responsible for any direct or indirect damage caused due to the usage of this tool, it is for educational purposes only.**
 
+**Currently, supports the key logging and access to files and directories**
+
+***
 
 It consists of two parts :
 
-Server side (server.py) : This is what we are going to place on the victims computer
+* Server side (server.py) : This is what we are going to place on the victims computer
 
-Client side (client.py) : This is what the attacker will use to connect the server on to control the victims computer
+* Client side (client.py) : This is what the attacker will use to connect the server on to control the victims computer
+
+****
 
 ## Installation
 
@@ -21,11 +26,13 @@ git clone https://github.com/SIRUS-THE-VIRUS/Computer-Security-RAT.git
 
 ## Usage
 
-Step 1: Get server.py onto the victim computer
+* Modify the IP address and Port for the socket connection at your discretion. 
 
-Step 2: Get the victim to execute the server
+* Get server.py onto the victim computer
 
-Step 3: Connect to the server from the attacker's computer using client.py
+* Get the victim to execute the server
+
+* Connect to the server from the attacker's computer using client.py
 
 
 
