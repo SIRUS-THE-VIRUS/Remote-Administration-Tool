@@ -2,7 +2,7 @@
 
 **I will not be responsible for any direct or indirect damage caused due to the usage of this tool, it is for educational purposes only.**
 
-**Currently, supports the key logging and access to files and directories**
+**Currently, supports the keylogging, remote shell and webcam monitoring(beta)**
 
 ***
 
